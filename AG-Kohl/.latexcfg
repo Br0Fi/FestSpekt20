@@ -1,4 +1,0 @@
-{
-"root" : "MA-A-07_V11_21-10-2019.tex",
-"toolchain" : "pdflatex -synctex=1 -interaction=nonstopmode -file-line-error -pdf %DOC" 
-}
