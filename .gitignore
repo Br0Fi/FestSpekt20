@@ -24,3 +24,5 @@
 *2018.pdf
 *2019.pdf
 *2020.pdf
+*.latexcfg
+*.latexmkrc
