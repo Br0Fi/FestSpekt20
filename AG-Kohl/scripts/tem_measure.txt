@@ -1,0 +1,18 @@
+HRTEM
+-Abzählen aus hrtem_zoom_crop
+> 1) auf 8nm 22 (+-1) Spalte
+  2) auf 8nm 22 (+-1) Spalte
+=> d=8/22=0.36nm
+
+- Freq aus FFT aus hrtem_crop (Bildseite=50nm)
+jeweils gegenüberliegende Punkte:
+> 1) 0.29 0.29 nm/c
+  2) 0.28 0.28 nm/c
+  3) (sehr schwach) 0.3  0.3  nm/c
+  Umrechnen nicht nötig, das ist ja die Wellenlänge.
+
+TEM DIFF
+1) 4/d = 12.81 1/nm
+2) 3/d = 9.46 1/nm
+3) 3/d = 9.55 1/nm
+Unsicherheit: Größe der Spots: FWHM=0.2 1/nm
