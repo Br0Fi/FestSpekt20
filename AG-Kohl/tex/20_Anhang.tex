@@ -10,7 +10,7 @@ Hierfür wurde die Python Bibliothek "uncertainties" verwendet, welche den Richt
 Für die Unsicherheiten der Parameter in Annäherungskurven wurden die $y$-Unsicherheiten der anzunähernden Werte beachtet und die Methode der kleinsten Quadrate angewandt.
 Dafür steht in der Bibliothek die Methode "scipy.optimize.curve\_fit()" zur Verfügung.
 
-Für digitale Messungen wird eine rechteckige Verteilung mit $\sigma_X = \frac{\Delta X}{2\sqrt{3}}$ und für analoges Ablesen wird eine Dreiecksverteilung mit $\sigma_X = \frac{\Delta X}{2\sqrt{6}}$ angenommen.
+Für Messungen mit digitalen Anzeigen wird eine rechteckige Verteilung mit $\sigma_X = \frac{\Delta X}{2\sqrt{3}}$ aufgrund der begrenzten Ziffernzahl und für analoges Ablesen wird eine Dreiecksverteilung mit $\sigma_X = \frac{\Delta X}{2\sqrt{6}}$ angenommen.
 Die jeweiligen $\Delta X$ sind im entsprechenden Abschnitt zu finden.
 
 \begin{figure}[ht]
