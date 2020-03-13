@@ -29,35 +29,34 @@
 	\end{figure}
 
 
- %TODO HRTEM: Aus Bild Netzebenenabstand bestimmen und aus FT von Bild.
- %TODO Gitterkonstante, Netzebenenabstand oder Atomabstand?
 
- \subsection{Bestimmung der Gitterkonstante}
+ \subsection{Bestimmung der Atomabstände in der Projektionsebene}
 
  In \cref{fig:hrtem} ist die Aufnahme der Oberfläche des Kristalls dargestellt.
- Daraus wird durch Abzählen der Täler im Linienprofil die Gitterkonstante in den beiden sichtbaren Richtungen bestimmt und in \cref{tab:netz} dargestellt.
- Die Unsicherheit wurde mit einer Abweichung von einer Gitterkonstante über \SI{22}{} abgezählte Täler abgeschätzt.
+ Daraus wird durch Abzählen der Täler im Linienprofil die Atomabstände in den beiden sichtbaren Richtungen bestimmt und in \cref{tab:netz} dargestellt.
+ Die Unsicherheit wurde mit einer Abweichung in Höhe von einem Atomabstand über die abgezählte Täler abgeschätzt.
 
 	\begin{figure}[H]
 		\centering
 	\begin{subfigure}[b]{0.45\textwidth}
-				\includegraphics[width= 1 \linewidth]{img/hrtem_richt}
+				\includegraphics[width= 1 \linewidth]{img/hrtem_zoomzoom}
 				\caption{}
+        \label{fig:hrtem_img}
 		\end{subfigure}
 	\begin{subfigure}[b]{0.45\textwidth}
-				\includegraphics[width= 1 \linewidth]{img/tem_line-Plot_hrtem_zoom_crop}
+				\includegraphics[width= 1 \linewidth]{img/tem_line-Plot_hrtem_orig}
 				\caption{}
 		\end{subfigure}
 		\label{fig:hrtem}
 		\caption{
-      TEM-Aufnahme der Oberfläche des WSe$_2$-Kristalls und eines der Linienprofile.
+      TEM-Aufnahme der Oberfläche des WSe$_2$-Kristalls und eines der Linienprofile. Für dieses wurde über mehrere parallele Atomreihen gemittelt, wodurch das Rauschen stark verringert wurde.
 				}
 	\end{figure}
 
-  Für \cref{fig:ft} wurde diese Aufnahme fouriertransformiert.
+  Für \cref{fig:ft} wurde diese Aufnahme (mit geringerer Vergrößerung als in \cref{fig:hrtem_img}) fouriertransformiert.
   Darin tauchen räumliche Frequenzen (die Gitterstruktur) als helle Punkte auf.
-  Aus der Position dieser Punkte ergibt sich die räumliche Wellenlänge, die hier der Gitterkonstante entspricht.
-  Die so ermittelten Gitterkonstanten sind in \cref{tab:netz} eingetragen.
+  Aus der Position dieser Punkte ergibt sich die räumliche Wellenlänge, die hier dem Atomabstand entspricht.
+  Die so ermittelten Atomabstände sind in \cref{tab:netz} eingetragen.
   Für die Unsicherheit wurde die FWHM der röumlichen Peaks verwendet.
 
 	\begin{figure}[H]
@@ -69,15 +68,15 @@
 			\label{fig:ft}
 	\end{figure}
 
-  Als letzte Methode wird das Bild in der Streuebene bei Beleuchtung einer hinreichend großen Fläche (einige Gitterkonstanten) aufgenommen und in \cref{fig:diff} abgebildet.
-  Anhand der Abstände der Spots wird über den Kehrwert die Gitterkonstante des Realraumgitters bestimmt und in \cref{tab:netz} vermerkt.
+  Als letzte Methode wird das Bild in der Streuebene bei Beleuchtung einer hinreichend großen Fläche (einige Atomabstände) aufgenommen und in \cref{fig:diff} abgebildet.
+  Anhand der Abstände der Spots wird über den Kehrwert die Atomabstände des Realraumgitters (in der Projektion auf eine Ebene) bestimmt und in \cref{tab:netz} vermerkt.
   Es wird der Abstand über mehrere Spots gemessen und gemittelt.
 
 	\begin{figure}[H]
   \centering
 			\includegraphics[width= 0.6 \linewidth]{img/tem_diff}
 			\caption{
-        TEM-Aufnahme der Streuebene.
+        TEM-Aufnahme in der Streuebene.
 			}
 			\label{fig:diff}
 	\end{figure}
@@ -86,22 +85,39 @@
 
 	\begin{table}
 		\centering
-		\caption{Auf unterschiedliche Arten bestimmte Gitterkonstanten der Oberfläche der WSe$_2$-Probe. Die Richtungen können sind nur zu Unterscheidung innerhalb der selben Messmethode angegeben. Zwischen den Methoden sind die Richtungen nicht konstant.}
+		\caption{Auf unterschiedliche Arten bestimmte Atomabstände der WSe$_2$-Probe. Die Richtungen können sind nur zu Unterscheidung innerhalb der selben Messmethode angegeben. Zwischen den Methoden sind die Richtungen nicht konstant.
+    Für den Literaturwert wurde der Abstand zwischen den Selenatomen angegeben.}
 		\begin{tabular}{c| c | c}
-			Methode & Richtung & Gitterkonstante \\ \hline
+			Methode & Richtung & Atomabstand \\ \hline
 			% & & & \\
-      Linienprofil &  1 & \SI{0.36 \pm 0.02}{nm}\\ %TODO hier ist was schiefgelaufen.
-      Linienprofil &  2 & \SI{0.36 \pm 0.02}{nm}\\ %TODO neuer Wert: 0.29 überprüfen in Profil
+      Linienprofil &  1 & \SI{0.31 \pm 0.01}{nm}\\
+      Linienprofil &  2 & \SI{0.31 \pm 0.01}{nm}\\
       Fouriertransformation & 1 & \SI{0.29 \pm 0.01}{nm}\\
       & 2 & \SI{0.3 \pm 0.01}{nm}\\
       Streuebene & 1 & \SI{0,312 \pm 0.001}{nm} \\
       & 2 & \SI{0,317 \pm 0.001}{nm} \\
       & 3 & \SI{0,314 \pm 0.001}{nm} \\
-      Mittelwert & & \\ %TODO mit Stderr
-      Literatur & & \\ %TODO Litwert von Wikipedia
+      Mittelwert & \SI{0,308 \pm 0.002}{nm}& \\
+      Literatur & & \SI{0,334}{nm} \cite{wiki_wse}\\
 		\end{tabular}
 		\label{tab:netz}
 	\end{table}
+
+\subsection{Diskussion der TEM-Ergebnisse}
+
+  Die mittels der verschiedenen Messmethoden ermittelten Atomabstände in \cref{tab:netz} stimmen innerhalb der Messunsicherheit miteinander überein.
+  Dass abhängig von der Messrichtung kein Unterschied im Atomabstand besteht, stimmt mit der zu erwartenden hexagonalen Symmetrie innerhalb einer Wolframdiselenidlage überein.
+  Die Abweichung nach Unten gegenüber dem Literaturwert für den Abstand der Selenatome kommt dadurch zustande, dass nicht dieser Abstand, sondern der Abstand der Projektion der Atome (Wolfram und Selen) auf eine ebene Fläche gemessen wurde.
+  Wie in zu sehen ist, liegen auch innerhalb einer Monolage nicht alle Atome in einer Ebene.
+
+	\begin{figure}[H]
+  \centering
+			\includegraphics[width= 0.6 \linewidth]{img/strukt}
+			\caption{
+        Struktur einer Monolage Wolframdiselenid. \cite{wiki_wse_bild}
+			}
+			\label{fig:diff}
+	\end{figure}
 
   \subsection{EELS}
 
