@@ -108,21 +108,49 @@
   Die mittels der verschiedenen Messmethoden ermittelten Atomabstände in \cref{tab:netz} stimmen innerhalb der Messunsicherheit miteinander überein.
   Dass abhängig von der Messrichtung kein Unterschied im Atomabstand besteht, stimmt mit der zu erwartenden hexagonalen Symmetrie innerhalb einer Wolframdiselenidlage überein.
   Die Abweichung nach Unten gegenüber dem Literaturwert für den Abstand der Selenatome kommt dadurch zustande, dass nicht dieser Abstand, sondern der Abstand der Projektion der Atome (Wolfram und Selen) auf eine ebene Fläche gemessen wurde.
-  Wie in zu sehen ist, liegen auch innerhalb einer Monolage nicht alle Atome in einer Ebene.
+  Wie in \cref{fig:strukt} zu sehen ist, liegen auch innerhalb einer Monolage nicht alle Atome in einer Ebene.
 
 	\begin{figure}[H]
   \centering
-			\includegraphics[width= 0.6 \linewidth]{img/strukt}
+			\includegraphics[width= 0.4 \linewidth]{img/strukt}
 			\caption{
         Struktur einer Monolage Wolframdiselenid. \cite{wiki_wse_bild}
 			}
-			\label{fig:diff}
+			\label{fig:strukt}
 	\end{figure}
 
   \subsection{EELS}
 
+	\begin{figure}[H]
+		\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+				\includegraphics[width= 1 \linewidth]{img/tem_zeroloss}
+				\caption{zero-loss}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+				\includegraphics[width= 1 \linewidth]{img/tem_coreloss}
+				\caption{core-loss}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+				\includegraphics[width= 1 \linewidth]{img/tem_mark}
+				\caption{low-loss}
+	\end{subfigure}
+		\label{fig:eels}
+		\caption{
+      EELS-Spektren der Wolframdiselenidprobe.
+			}
+	\end{figure}
+
   Zuletzt wird das EEL-Spektrum der Probe aufgenommen.
-  Es ist in zu sehen. %TODO
+  Es ist in \cref{fig:eels} zu sehen.
   Hier wurden die deutlich erkennbaren Peaks entsprechend ihres Ursprungs beschriftet.
- %TODO Im low-loss die Peaks zuordnen (im coreloss nur Silizium vom Trägermaterial sichtbar)
- %die Multimap-Dateien sind EFTEM-Aufnahmen. Da sollen wir nichts mit machen
+  Wolfram hat lediglich Kanten im Bereich von über \SI{1800}{eV}, also außerhalb des Messbereichs, und eine O-Kante bei \SI{36}{eV} \cite{eelsinfo}, die jedoch im Spektrum aufgrund ihrer geringen Intensität und hohen Ausgeschmiertheit nicht zu erkennen ist.
+
+  Selen besitzt zwei Kanten über \SI{1400}{eV}, die ebenfalls nicht mehr im Messbereich sind.
+  Die M$_4,5$-Kante bei \SI{57}{eV} ist jedoch erkennbar.
+
+  Außerdem ist der Plasmonenpeak im Low-Loss-Bereich zu erkennen.
+  %TODO Der kleine Peak dazwischen passt irgendwie zu nichts.
+
+
+ %die Multimap-Dateien sind EFTEM-Aufnahmen. Da sollen wir denke nichts mit machen
