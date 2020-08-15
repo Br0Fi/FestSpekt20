@@ -1,0 +1,86 @@
+% Autor: Alex Oster, Jonathan Sigrist, Luca Wiggering
+% Datum: 2018-01
+% basiert auf der Vorlage für Versuchsprotokolle von Simon May
+
+%\includeonly{
+%	tex/04_Titelseite,
+%	tex/05_Gliederung,
+%	tex/14_Kurzfassung,
+%	tex/15_Theorie,
+%	tex/16_Methoden,
+%	tex/17_Ergebnisse,
+%	tex/19_Zusammenfassung,
+%	tex/20_Anhang,
+%	tex/21_Literatur
+%}
+
+\documentclass[
+	a4paper,                % Papierformat (DIN A4)
+	titlepage=firstiscover, % Separate Titelseite
+	captions=tableheading,  % \caption bei Tabellen immer als Überschrift setzen
+	toc=bibliography,       % Literaturverzeichnis im Inhaltsverzeichnis aufführen
+	toc=listof,             % Abbildungsverzeichnis etc. im Inhaltsverzeichnis aufführen
+	oneside,                % Einseitig
+	%twoside,               % Zweiseitig
+	%twocolumn,             % Zweispaltig
+	automark,               % Abschnittstitel automatisch in Kopfzeile einfügen
+	12pt,                   % Schriftgröße (beliebige Größen mit „fontsize=Xpt“)
+	english,		% Sprache für z.B. Babel; ausgewählt: ngerman (letztgenannt)
+	%draft=true             % Entwurf-Modus; markiert zu lange und zu kurze Zeilen
+]{scrartcl}
+
+\input{tex/01_PaketeEinstellungen.tex}
+\input{tex/02_EigeneBefehle.tex}
+\input{tex/03_Variablen.tex}
+\usepackage{upgreek}
+
+\newboolean{showEmail}
+\setboolean{showEmail}{\varZeigeEmail}
+\newboolean{showHeader}
+\setboolean{showHeader}{\varZeigeKopfzeile}
+\newboolean{showTOC}
+\setboolean{showTOC}{\varZeigeInhaltsverzeichnis}
+\newboolean{showBibliography}
+\setboolean{showBibliography}{\varZeigeLiteraturverzeichnis}
+
+\renewcommand\maketitle{}
+
+\bibliography{lit/literatur}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+	% Römische Seitenzahlen für Titelseite/Inhaltsverzeichnis
+	\pagenumbering{roman}
+	% Zunächst ohne Kopf-/Fußzeile
+	\pagestyle{scrplain}
+
+	% --- Titelseite einbinden
+	%     Falls die Datei „res/titelbild.pdf“ existiert, wird sie auf der Titelseite
+	%     eingefügt
+	\include{tex/04_Titelseite}
+	%\IfFileExists{tex/04_Titelseite.tex}{
+	%	\input{tex/04_Titelseite.tex}
+	%}{}
+
+	\include{tex/05_Gliederung}
+
+	% Zurücksetzen der Seitenzahlen auf arabische Ziffern
+	\pagenumbering{arabic}
+	% Ab hier mit Kopf- und Fußzeile
+	\pagestyle{scrheadings}
+
+	\input{tex/11_introduction}
+	\input{tex/12_theory}
+	\input{tex/15_monolayers}
+	\input{tex/16_SPE}
+	\input{tex/17_Faraday_Rotation}
+	% Bezug/Nutzen oder sonst was
+	% auch hier die Hypothese wiederholen
+	% keine Messwerte hier, nach manchen Menschen, zumindest "direkt" erstellte Diagramme net hier, auch wenn Lesbarkeit-bla
+	\input{tex/19_conclusion}
+		% --- Anhang einbinden
+	\input{tex/20_Anhang}
+	\input{tex/21_Literatur}
+
+\end{document}
