@@ -15,8 +15,10 @@
 
 Hexagonal boron nitride powder on a substrate is viewed through a confocal microscope, which is shown in \cref{fig_confocal}.
 In order to navigate on the sample, a white light source and a camera are used.
-Once a promising region is found, the laser is used instead and the detector (a spectrometer) is used, to record spectra at different spots on the sample, until a single photon emitter (SPE) is found.
-The SPE is identified through %TODO irgendwie, dass das Spektrum auf bestimmte Weise aussieht.
+The laser is passed through a laser line filter, to sharpen its energy distribution.
+%TODO was ist jetzt der Sinn von dem pinhole? Eigentlich würde ich ja das mit dem aus einer Ebene sagen, aber er meinte ja irgendwas anderes.
+Once a promising region is found, the laser is used instead and the detector (a spectrometer) is used, to record spectra at different spots on the sample, until a likely single photon emitter (SPE) is found.
+The likely SPE is identified through having a clean spectrum that only contains one SPE and no other photon sources.%TODO irgendwie, dass das Spektrum auf bestimmte Weise aussieht.
 
 Once a suspected SPE is found, an antibunching measurement is conducted, by replacing the spectrometer with a two fibres that split the light into two parts, that are seperately measured with two detectors as described in \cref{sec:theory:spe}.
 These measurements are conducted for a series of different excitation laser powers and for each measurement a seperate background measurement is done. %TODO wie wurde das background measurement gemacht? Wir haben ja nicht die Probe bewegt. Einfach Strahl direkt von Laser auf Detektor geleitet?
@@ -36,6 +38,7 @@ If the average number of counts in a bin far away from the dip and any resonance
 \end{equation}
 The factor $F$ is added artificially and maually adjusted for each measurement, as without it the resonance peaks are overestimated causing minima in the corrected signal.
 In order to do this the term $\frac{I_S}{I_B F} (B-I_B) + I_S$ is plotted in comparison to the uncorrected signal as shown in \cref{fig_antibunch_background_comp} and $F$ is adjusted, until the resonance peaks match up.
+The valuse used for $F$ lie in the range of \SIrange{1,5}{6}{}.
 In \cref{fig_antibunch_raw_corr_comp} the corrected signal $\tilde{S}$ is compared to the raw signal $S$.
 Also the delay times are adjusted by an offset of \SI{98,5}{ns}, so that the dip lies at \SI{0}{ns}.
 This is necessary due to slightly different travelling time of the signal between the detectors.
@@ -97,23 +100,33 @@ For the depth this can only be explained by the increasing likelyhood that two p
 But as the width decreases at the same time, it can be seen that the emitter doesn't reach complete saturation, as in this case only the constant background would increase causing the width at half depth to increase as well.
 %TODO jetzt wo ich das geschrieben habe, finde ich diese beiden Plots nicht sehr aussagevoll, da das beides ziemlich obvious ist, aber ich weiß nicht, was ich sonst mit den ganzen antibunching messungen machen soll.
 
-%\begin{figure}[!ht]
-    %\centering
-    %\begin{subfigure}{0.8\textwidth}
-        %\centering
-        %\includegraphics[width=1.0\textwidth]{cu_stress_strain.png}
-    %\caption{Measurement.}
-    %\label{cu_stress_strain}
-    %\end{subfigure}
-    %%\hfill
-    %\begin{subfigure}{0.8\textwidth}
-        %\centering
-        %\includegraphics[width=\textwidth]{shabnam_technical-stress-strain.png}
-        %\caption{Reference.}
-        %\label{fig_shabnam_tss}
-    %\end{subfigure}
-    %\caption{Technical stress-strain-curve of a copper single crystal and reference provided by the instructor.}
-	%\label{cu_stress_strain_ges}
-%\end{figure}
+It is also observed that the SPE starts blinking at high powers, disappearing for short periods of time, before reappearing.
+This can be explained, by supposing that at this photon rate the emitter is saturated in the way that electron-hole pairs are created faster than they can decay, causing periods of time, where there are no excitable electrons available. %TODO I guess...? Widerspricht auch bisschen dem davor, aber das hier finde ich überzeugender.
 
 \subsubsection{Power efficiency of the SPE}
+
+In \cref{fig_spe_spectrum_example} an example of the recorded spectra is shown.
+A constant background has been substracted, so that there are no counts at high wavelengths.
+The large peak corresponds to the main zero-phonon decay of an exciton, while to the right two peaks of the one-phonon decay and even two very small peaks of the two-phonon decay can be seen. %TODO warum genau sind da jeweils zwei? und was ist der kleine Peak links?
+The small peak at \SI{532}{nm} is caused by the reflection of the laser itself, as this is its wavelength.
+It is small, because most of it gets filtered out by the longpass filter.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/output_t2/spektrum_example_bgcorr_200.0muW.png}
+    \caption{Recorded Spectrum of the observed single photon emitter at a laser power of \SI{200}{\micro W}. A constant background has been substracted.}
+    \label{fig_spe_spectrum_example}
+\end{figure}
+
+In order to observe the behaviour of the SPE at increasing laser powers, in \cref{fig_spe_integrals} each spectra has been integrated and normalized over the time that the spectrum was recorded over.
+It can be seen, that the output increases mostly linearly with the power meaning that the efficiency is approximately constant.
+It would be expected that at higher powers as seen above the SPE approaches saturation, causing the efficiency to go down and the increase in output photons to be reduced.
+This could not be observed, as the observed SPE died at \SI{450}{\micro W}.
+%TODO warum nicht linear bei kleinen Leistungen?
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{img/output_t2/integrals.png}
+    \caption{Integrated spectra of the SPE normalized by the detection time at different laser powers.}
+    \label{fig_spe_integrals}
+\end{figure}
