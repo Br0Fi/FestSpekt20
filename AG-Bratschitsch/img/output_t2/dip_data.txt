@@ -1,0 +1,9 @@
+height measured at edge of dip; width measured at half point; power in muW; vlt. doch error getrennt.
+power	depth	derror	height	herror	widthL	widthR
+error	s		s		1	1
+100	9	2	60	5	95.5	102
+500	11	1.5	60	6	96.4	101.1
+2000	35	5	93	6	97.4	99.2
+1000	12.5	4	57.2	5	96.2	100.4
+50	5.9	2	35	4	94.4	101.9
+250	14	3	80	8	95.8	100.4
