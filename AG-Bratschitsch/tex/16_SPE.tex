@@ -15,7 +15,9 @@
 
 Hexagonal boron nitride powder on a substrate is viewed through a confocal microscope, which is shown in \cref{fig_confocal}.
 In order to navigate on the sample, a white light source and a camera are used.
+For the measurements a laser and a detector is used.
 The laser is passed through a laser line filter, to sharpen its energy distribution.
+The pinhole causes light not emitted from the desired plane to be excluded, allowing focusing along the optical axis.
 %TODO was ist jetzt der Sinn von dem pinhole? Eigentlich würde ich ja das mit dem aus einer Ebene sagen, aber er meinte ja irgendwas anderes.
 Once a promising region is found, the laser is used instead and the detector (a spectrometer) is used, to record spectra at different spots on the sample, until a likely single photon emitter (SPE) is found.
 The likely SPE is identified through having a clean spectrum that only contains one SPE and no other photon sources.%TODO irgendwie, dass das Spektrum auf bestimmte Weise aussieht.
@@ -103,7 +105,7 @@ But as the width decreases at the same time, it can be seen that the emitter doe
 It is also observed that the SPE starts blinking at high powers, disappearing for short periods of time, before reappearing.
 This can be explained, by supposing that at this photon rate the emitter is saturated in the way that electron-hole pairs are created faster than they can decay, causing periods of time, where there are no excitable electrons available. %TODO I guess...? Widerspricht auch bisschen dem davor, aber das hier finde ich überzeugender.
 
-\subsubsection{Power efficiency of the SPE}
+\subsubsection{Spectra and Power efficiency of the SPE}
 
 In \cref{fig_spe_spectrum_example} an example of the recorded spectra is shown.
 A constant background has been substracted, so that there are no counts at high wavelengths.
@@ -118,7 +120,7 @@ It is small, because most of it gets filtered out by the longpass filter.
     \label{fig_spe_spectrum_example}
 \end{figure}
 
-In order to observe the behaviour of the SPE at increasing laser powers, in \cref{fig_spe_integrals} each spectra has been integrated and normalized over the time that the spectrum was recorded over.
+In order to observe the behaviour of the SPE at increasing laser powers, in \cref{fig_spe_integrals} each spectra has been integrated and normalized over the time that the spectrum was recorded over. %theoretisch hätte man hier den Laserpeak rauslassen sollen, aber macht auch keinen großen Unterschied.
 It can be seen, that the output increases mostly linearly with the power meaning that the efficiency is approximately constant.
 It would be expected that at higher powers as seen above the SPE approaches saturation, causing the efficiency to go down and the increase in output photons to be reduced.
 This could not be observed, as the observed SPE died at \SI{450}{\micro W}.
