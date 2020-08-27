@@ -23,8 +23,8 @@ Once a promising region is found, the laser is used instead and the detector (a 
 The likely SPE is identified through having a clean spectrum that only contains peaks of one SPE and no other photon sources.
 
 Once a suspected SPE is found, an antibunching measurement is conducted, by replacing the spectrometer with a two fibres that split the light into two parts, that are seperately measured with two detectors as described in \cref{sec:theory:spe}.
-These measurements are conducted for a series of different excitation laser powers and for each measurement a seperate background measurement is done. %TODO wie wurde das background measurement gemacht? Wir haben ja nicht die Probe bewegt. Einfach Strahl direkt von Laser auf Detektor geleitet?
-Additionally spectra are also recorded for increasing laser powers.
+These measurements are conducted for a series of different excitation laser powers and for each measurement a seperate background measurement is done. %TODO wie wurde das background measurement gemacht? Wir haben ja nicht die Probe bewegt. Einfach Strahl direkt von Laser auf Detektor geleitet? <- ja
+Additionally spectra are also recorded for increasing laser powers. %TODO verwechsele ich laser powers oder ist das doppelt mit dem vorherigen Satz?
 
 \subsection{Analysis}
 \subsubsection{Antibunching}
@@ -38,9 +38,9 @@ If the average number of counts in a bin far away from the dip and any resonance
 \begin{equation}
   \tilde{S} (\tau) = S - \frac{I_S}{I_B F} (B-I_B) = S - \frac{I_S}{I_B} B + I_S
 \end{equation}
-The factor $F$ is added artificially and maually adjusted for each measurement, as without it the resonance peaks are overestimated causing minima in the corrected signal.
+The factor $F$ is added artificially and manually adjusted for each measurement, as without it the resonance peaks are overestimated causing minima in the corrected signal.
 In order to do this the term $\frac{I_S}{I_B F} (B-I_B) + I_S$ is plotted in comparison to the uncorrected signal as shown in \cref{fig_antibunch_background_comp} and $F$ is adjusted, until the resonance peaks match up.
-The valuse used for $F$ lie in the range of \SIrange{1,5}{6}{}.
+The values used for $F$ lie in the range of \SIrange{1,5}{6}{}.
 In \cref{fig_antibunch_raw_corr_comp} the corrected signal $\tilde{S}$ is compared to the raw signal $S$.
 Also the delay times are adjusted by an offset of \SI{98,5}{ns}, so that the dip lies at \SI{0}{ns}.
 This is necessary due to slightly different travelling time of the signal between the detectors.
@@ -78,7 +78,7 @@ These antibunching measurements show that indeed a single photon emitter was fou
 It can also be seen, that for very high laser powers the edges of the signal start to decrease significantly with the absolute value of the delay time.
 This can be explained by the fact, that here the photon rate emitted from the laser and thereby from the sample is so high that large delays between start and stop signal become increasingly unlikely.
 
-In order to characterize the behaviour of the source at increasing excitation powers, the dip depth at the width of the dip at half of its depth is manually read from the charts.
+In order to characterize the behavior of the source at increasing excitation powers, the dip depth at the width of the dip at half of its depth is manually read from the charts.
 The results are shown in \cref{fig_dip_depth} and \cref{fig_dip_width}.
 The depth is normalized by $I_S$ to ensure comparibilty between measurements.
 The uncertainties are gauged from the thickness of the noise.
@@ -109,7 +109,7 @@ This can be explained, by supposing that at this photon rate the emitter is satu
 
 In \cref{fig_spe_spectrum_example} an example of the recorded spectra is shown.
 A constant background has been substracted, so that there are no counts at high wavelengths.
-The large peak corresponds to the main zero-phonon decay of an exciton, while to the right two peaks of the one-phonon decay and even two very small peaks of the two-phonon decay can be seen. %TODO warum genau sind da jeweils zwei? 
+The large peak corresponds to the main zero-phonon decay of an exciton, while to the right two peaks of the one-phonon decay and even two very small peaks of the two-phonon decay can be seen. %TODO warum genau sind da jeweils zwei?
 The small peak at \SI{532}{nm} is caused by the reflection of the laser itself, as this is its wavelength.
 It is small, because most of it gets filtered out by the longpass filter.
 
@@ -120,7 +120,7 @@ It is small, because most of it gets filtered out by the longpass filter.
     \label{fig_spe_spectrum_example}
 \end{figure}
 
-In order to observe the behaviour of the SPE at increasing laser powers, in \cref{fig_spe_integrals} each spectra has been integrated and normalized over the time that the spectrum was recorded over. %theoretisch hätte man hier den Laserpeak rauslassen sollen, aber macht auch keinen großen Unterschied.
+In order to observe the behavior of the SPE at increasing laser powers, in \cref{fig_spe_integrals} each spectra has been integrated and normalized over the time that the spectrum was recorded over. %theoretisch hätte man hier den Laserpeak rauslassen sollen, aber macht auch keinen großen Unterschied.
 It can be seen, that the output increases mostly linearly with the power meaning that the efficiency is approximately constant.
 It would be expected that at higher powers as seen above the SPE approaches saturation, causing the efficiency to go down and the increase in output photons to be reduced.
 This could not be observed, as the observed SPE died at \SI{450}{\micro W}.
