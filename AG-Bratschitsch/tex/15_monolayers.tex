@@ -28,19 +28,19 @@ For one material two specimen (pieces including monolayers) are examined and for
 
 In \crefrange{fig_mono_spec1}{fig_mono_spec3} the image recorded using the interference based and the widefield microscope are shown.
 As an example for the first specimen the image containing the spectrum is shown in \cref{fig_mono_spec1_spec}.
-In the interference based microscope monolayers appear as light fawn (hex color code \#A97E5C), while in the widefield microscope they appear bright white.
+In the interference based microscope monolayers appear as fawn (hex color code \#A97E5C), while in the widefield microscope they appear bright white.
 From these images for each specimen the spectrum is calculated by summing over multiple lines of pixels and can be seen in \cref{fig_mono_1dspectra}.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.47\textwidth}
+    \begin{subfigure}{0.3\textwidth}
         \centering
         \includegraphics[width=1.0\textwidth]{img/output_t1/M1_3_100_adj}
         \caption{interference}
 	      \label{fig_mono_spec1_int}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.47\textwidth}
+    %\hfill
+    \begin{subfigure}{0.24\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/M1_3_50_adj_photo}
         \caption{widefield}
@@ -52,63 +52,61 @@ From these images for each specimen the spectrum is calculated by summing over m
         \caption{spectrum}
 	      \label{fig_mono_spec1_spec}
     \end{subfigure}
-    \caption{Optical microscopy images for specimen 1 of material 1 gained by the interference based microscope and the widefield microscope. Additionally the image containing the spectrum in one direction is shown and the part that is used for the spectrum in \cref{fig_mono_1dspectra} lies between the blue lines.}
+    \caption{Optical microscopy images for specimen 1 of material 1 obtained by the interference based microscope and the widefield microscope. Additionally the image containing the spectrum in one direction is shown and the part that is used for the spectrum in \cref{fig_mono_1dspectra} lies between the blue lines.}
 	\label{fig_mono_spec1} % 3->1
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.47\textwidth}
+    \begin{subfigure}{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/M1_2_100_adj}
         \caption{interference}
 	      \label{fig_mono_spec2_int}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.47\textwidth}
+    \begin{subfigure}{0.4\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/M1_2_50_adj_photo}
         \caption{widefield}
 	      \label{fig_mono_spec2_wide}
     \end{subfigure}
-    \caption{Optical microscopy images for specimen 2 of material 1 gained by the interference based microscope and the widefield microscope.}
+    \caption{Optical microscopy images for specimen 2 of material 1 obtained by the interference based microscope and the widefield microscope.}
 	\label{fig_mono_spec2} %2->2
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.47\textwidth}
+    \begin{subfigure}{0.4\textwidth}
         \centering
         \includegraphics[width=1.0\textwidth]{img/output_t1/M2_1_100_adj}
         \caption{interference}
 	      \label{fig_mono_spec3_int}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.47\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/M2_1_50_adj_photo4}
         \caption{widefield}
 	      \label{fig_mono_spec3_wide}
     \end{subfigure}
-    \caption{Optical microscopy images for material 2 gained by the interference based microscope and the widefield microscope.}
+    \caption{Optical microscopy images for material 2 obtained by the interference based microscope and the widefield microscope.}
 	\label{fig_mono_spec3} %mat2 -> 3
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.51\textwidth}
         \centering
-        \includegraphics[width=1.0\textwidth]{img/output_t1/spekt_m1-3}
+        \includegraphics[width=\textwidth]{img/output_t1/spekt_m1-3}
         \caption{mat. 1, spec. 1}
 	      \label{fig_mono_spec1_1dspec}
     \end{subfigure}
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.51\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/spekt_m1-2-1}
         \caption{mat.1, spec. 2}
 	      \label{fig_mono_spec2_1dspec}
     \end{subfigure}
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.51\textwidth}
         \centering
         \includegraphics[width=\textwidth]{img/output_t1/spekt_m2}
         \caption{mat.2}
@@ -118,7 +116,8 @@ From these images for each specimen the spectrum is calculated by summing over m
 	\label{fig_mono_1dspectra} %mat2 -> 3
 \end{figure}
 
-From the spectra the peak positions can be used to assign the materials to specific TMDCs.
+From the spectra the peak positions and peak width are extracted, by performing a Gauss fit for each peak.
+The peak position can be used to assign the materials to specific TMDCs according to their characteristic exciton transitions.
 The measured peaks for material 1 are at \SI{746,5\pm 7,2}{nm} and \SI{744,1 \pm 7,2} for specimen 1 and 2, respectively, which may correspond to MoSe$_2$, monolayers of which emit at \SI{790}{nm}. \cite{Tonndorf2013}.
 The difference may be due to not having measured a monolayer or change in the bandgap due to interaction with the substrate.
 The measured peaks for material 2 lie at \SI{530,1 \pm 4,3}{nm} (A exciton) and \SI{654,4 \pm 6,8} (B exciton), allowing it to be assigned to monolayer WSe$_2$ with reasonable certainty.
