@@ -22,7 +22,7 @@ As shown in \cref{fig_valley_split}, this leads to the existence of lower energy
     \begin{subfigure}{0.47\textwidth}
         \centering
     		\includegraphics[width=\textwidth]{img/tmdc_structure.png}
-    		\caption{} 
+    		\caption{} %TODO schauen, ob das auch mit doctorsthesis funktioniert,
     		\label{fig_tmdc_structure}
     \end{subfigure}
     \hfill
@@ -83,21 +83,20 @@ If the emitter in question is a Single-photon emitter, there will be a significa
 	\end{array}\right) \,,
 	\end{align*}
   with $\eta_\text{F}$ being the ellipticity of the polarization.
-	The initial linearly polarized light $\hat{E}_i$ can be written as a two-component vector: %TODO eher "the electric field of initially linearly polarized light" ?
+	The electric field of initially linearly polarized light $\hat{E}_i$ can be written as a two-component vector:
 	\begin{align*}
 		\hat{E}_i = \left( \begin{array}{r}
 					\cos{p} \\
 					\sin{p} \\
 				\end{array}\right) \,,
 	\end{align*}
-	where $p$ describes the lights polarization. %TODO wenn ich das richtig verstehe, ist p der Winkel, in dem das linear polarisiert ist. ich würde schreiben: "describes the angle of the linear polarization"
-	By multiplying this vector with the Jones matrices of the different objects in the beams path, expressions for the measured intensities $T_i = E_i^* E_i$ can be calculated.
-  Specifically, $E_i \propto \text{Jones matrices} \cdot \hat{E}_i$. %TODO das sieht sehr merkwürdig aus. Vielleicht "Jones matrices" in [] setzen? Oder einfach sagen, dass die Jones matrices J_k sind mit k vortlaufendem Index und dann als Produkt mit großem Pi schreiben:
-  %  E_i = (\prod_k J_k ) \cdot \hat{E}_i
-  %TODO außerdem: wofür ist das i in E_i gut?
+	where $p$ describes the angle of the linear polarization.
+	By multiplying this vector with the Jones matrices $\hat{J}_k$ of the different objects in the beams path, expressions for the measured intensities $T_i = E_i^* E_i$ can be calculated.
+  Specifically, $E_i \propto \prod_k \hat{J}_k \cdot \hat{E}_i$.
+  Here, the indices $i$ are assigned to the two components of the initially linear polarized light.
+
   The faraday rotation results from taking the difference of the measured intensities $T_i$ each divided by the intensities measured without a sample $T_i^0$:
 	\begin{align*}
 		\frac{T_1}{T_1^0} - \frac{T_2}{T_2^0} = 4 \varphi_\text{F} + \varphi_\text{bg} \,.
 	\end{align*}
-	Here, the indexes $1$ and $2$ are assigned to the two components of the initially linear polarized light.
 	Additionally, there is $\varphi_\text{bg}$, which amounts to noise expected to be measured without the sample.
