@@ -10,26 +10,26 @@
     \label{fig_setup3}
 \end{figure}
 To measure the Faraday rotation of a WS$_2$ monolayer a novel setup by Dr. Ashish Arora and Dr. Benjamin Carey is used.
-It is presented in \cref{fig_setup3} and allows a much faster acquisition of a whole spectrum than with previously used methods.
-Here, two types of illumination ares used.
-Firstly a laser to excite the monolayer and secondly a white light source to cover a broad energy spectrum rather than one energy at a time.
+It is shown in \cref{fig_setup3} and allows a much faster acquisition of a whole spectrum than with previously used methods.
+Here, two types of illumination are used:
+Firstly, a laser to excite the monolayer and secondly a white light source to cover a broad energy spectrum rather than one energy at a time.
 By using a laser line filter, the gaussian distribution of laser light energy is further monochromatized.
 After polarizing the beam, it travels through the sample inside a magnetic field.
 The transmitted light is then deflected into a lens system for reducing noise and focussing.
-A key component in this setup is the beam displacer, where the beam splits into two.
-This is dependent on the change in polarization induced by the sample.
-Both beams are then each focused on a row on the CCD-chip, which acts as a spectrometer.
+A key component in this setup is the beam displacer, where the beam splits into two relative to each other orthogonally polarized parts.
+Their intensity is dependent on the change in polarization induced by the sample.
+Both beams are then focused on different rows on the CCD-chip, which acts as a spectrometer. %TODO Gitter
 Again, to reduce noise, the signals of two additional rows around the ones where the beams are focused are taken and subtracted as background.
 In the setup used for the acquisition, a read-out-rate of \SI{1}{\mega\hertz} is reached and allows measurement of roughly $1000$ spectra per minute.
 
 \
 
-According to the theoretical description in \cref{sec:theory}, measuring at a certain initial beam polarization allows us to obtain the Faraday rotation, however with background.
+According to the theoretical description in \cref{sec:theory}, measuring at a certain initial beam polarization allows us to obtain the Faraday rotation, however with background. %TODO wieso initial beam polarization? man misst doch nicht das initiale?
 As this background does not change with the polarization, measurements are taken at \SI{+45}{\degree} and \SI{-45}{\degree} and then subtracted, since the Faraday rotation changes sign.
 
 To ensure that the WS$_2$ monolayer is laying flatly on a sapphire ($\text{Al}_2\text{O}_3$) substrate, it is trapped between hexagonal boron nitride, which only adds a negligible contribution to the measured data.
 Since the beam passes through both, the sapphire substrate and the WS$_2$ monolayer, again two measurements have to be taken do differentiate the background from the monolayer.
-This is done by comparing the verdet constants of monolayer with substrate and of only substrate.
+This is done by comparing the Verdet constant of the monolayer with substrate to the Verdet constant of only substrate.
 
 \subsection{Analysis}
 
@@ -56,9 +56,9 @@ From the scattering of data points outside of the exciton region, an uncertainty
 For comparison all lorentian fits are found in \cref{fig_WS2_lorentians}.
 As suspected an almost linear decrease of the value at the minimum can be seen.
 Only the minimum at \SI{0.75}{\tesla} does not fit very well.
-This may be due to remanent magnetisation, as the spectra were not taken in order of rising magnetic field strength.
+This may be due to remnent magnetisation, as the spectra were not taken in order of rising magnetic field strength.
 Also, the energy of the minima is not exactly the same for all magnetic field strengths, as it should be.
-However, since they are almost the same the mean value of \SI{1.990+-0.001}{\electronvolt} gives a good estimate.
+However, since they are almost the same, the mean value of \SI{1.990+-0.001}{\electronvolt} gives a good estimate.
 
 \begin{figure}[!ht]
     \centering
@@ -67,10 +67,10 @@ However, since they are almost the same the mean value of \SI{1.990+-0.001}{\ele
     \label{fig_WS2_minima}
 \end{figure}
 \cref{fig_WS2_minima} shows the beforementioned linear decrease by plotting the minima against the magnetic field strength.
-Here, it also shows that the minimum at \SI{0.75}{\tesla} is a little of the expected value-
+Here, it also shows that the minimum at \SI{0.75}{\tesla} is a little of the expected value- %TODO ?
 
-From its slope the verdet constant is extracted by division of the monolayers thickness of \SI{0.65}{\nano\meter}.
-It amounts to \SI{-8.99+-0.31e+07}{\deg\per\meter\per\tesla}.
+From its slope the Verdet constant is extracted by division of the monolayers thickness of \SI{0.65}{\nano\meter}.
+It amounts to \SI{-8.99+-0.31e+07}{\deg m^{-1} T^{-1}}.
 
 \
 
@@ -91,7 +91,7 @@ The comparison of their slopes yet again shows another linear behavior.
     \label{fig_sapphire_slopes}
 \end{figure}
 In \cref{fig_sapphire_lins} this is also fitted linearly.
-Again by dividing this slope by the substrates thickness of \SI{0.5}{\milli\meter} the now energy dependent verdet constant of \SI{-3.100+-0.034e+02}{\deg\per\electronvolt\per\meter\per\tesla} is acquired.
+Again by dividing this slope by the substrates thickness of \SI{0.5}{\milli\meter} the now energy dependent verdet constant of \SI{-3.100+-0.034e+02}{\deg /(eV m T)} is acquired.
 
-To compare this value with the \SI{-8.99+-0.31e+07}{\deg\per\meter\per\tesla} of the WS$_2$ monolayer, it is multiplied with the energy of the minima of \SI{1.990+-0.001}{\electronvolt} and results in \SI{-6.17+-0.07e+02}{\deg\per\meter\per\tesla}.
+To compare this value with the \SI{-8.99+-0.31e+07}{\deg m^{-1} T^{-1}} of the WS$_2$ monolayer, it is multiplied with the energy of the minima of \SI{1.990+-0.001}{\electronvolt}, which results in \SI{-6.17+-0.07e+02}{\deg m^{-1} T^{-1}}.
 These values differ in five orders of magnitude and thus show how strongly excitons influence the faraday rotation.
