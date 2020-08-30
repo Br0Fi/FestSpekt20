@@ -1,6 +1,110 @@
 \clearpage
-\section{Inverse Photoemission}
-\label{sec:prep}
+\section{Untersuchung einer $\text{TiSe}_2$-Probe}
+\label{sec:thijs2}
+
+Dieser Abschnitt beschäftigt sich mit der Suche nach einem Zustand im Leitungsband, welcher sich nach einer temperaturbedingten Phasenänderung in einer $\text{TiSe}_2$-Probe ergeben sollte.
+Dafür wird die Probe gekühlt und ein inverses Photoemissionspektrum aufgenommen.
+
+\subsection{Theoretische Grundlagen}
+\label{sec:theo1}
+
+Zum Verständnis des hier dargestellten Versuchaufbaus sind Wissen über inverse Photoemission (IPE), Beugung niederenergetischer Elektronen an Oberflächen (engl. LEED) und die zu verwendende $\text{TiSe}_2$-Probe notwendig.
+
+\subsubsection{Inverse Photoemission}
+
+Wie der Name impliziert, handelt es sich bei der inversen Photoemission um einen umgekehrten Photoeffekt.
+Ein niederenergetischer Elektronenstrahl ($<\SI{20}{\electronvolt}$\cite{wiki_ipe}) wird dazu auf eine Probe gerichtet.
+Es handelt sich um eine oberflächensensitive Methode, da die Elektronen aufgrund ihrer geringen Energie nur in wenige Atomlagen eindringen.
+Die Elektronen übertragen über Stöße ihre kinetische Energie auf Valenzelektronen nahe der Fermienergie des Materials.
+Letztere werden dabei in das Leitungsband angehoben und die bei der Rekombination entstehenden Photonen gemessen.
+Aus der Photonenenergie können Rückschlüsse auf die Bandstruktur des Materials gezogen werden.
+
+\subsubsection{Beugung niederenergetischer Elektronen an Oberflächen}
+
+Ähnlich wie bei der IPE wird ein niederenergetischer Elektronenstrahl auf die Probe gerichtet.
+Hierbei liegen die Energien jedoch in einer Größenordnung von \SI{100}{\electronvolt}\cite{wiki_leed}.
+Die an der Probe gebeugten Elektronen werden auf einen LEED-Schirm gerichtet, welche aus einem Gitter und einem Leuchtschirm besteht.
+Aus dem Interferenzmuster der gebeugten Elektronenstrahlen, welches sich auf dem Leuchtschirm aufzeichnet, kann die Gitterstruktur der Probe entnommen werden.
+Anzumerken ist, dass es sich bei dem Interferenzmuster nicht direkt um die Gitterstruktur handelt, sondern um die Punkte im $k$-Raum, welche die Laue-Bedingung für konstruktive Interferenz erfüllen.
+
+\subsubsection{Die $\text{TiSe}_2$-Probe}
+
+Bei $\text{TiSe}_2$ handelt es sich um ein Übergangsmetall-Dichalkogenid (engl. TMDC).
+Da TMDC-Monolagen kein Inversionszentrum besitzen, ändert sich die elektronische Struktur markant bei dem Übergang von einem Kristall zu einer Monolage.
+Weiterhin ändert sich die hexagonale Struktur an den K-Punkten des reziproken Gitters zu spin polarisiertem K- und K'-Tälern.
+Besonders an $\text{TiSe}_2$-Monolagen ist, dass sogenannte Ladungsdichtewellen (engl. CDW) zweier benachbarter Atome bei Temperaturen unter \SI{200}{\kelvin} zusammenziehen und dazu führen, dass sich die Brillouinzone halbiert.
+Durch die Halbierung der Brillouinzone wird aus dem vorherigen M-Punkt bereits der nächste $\Gamma$-Punkt, weswegen dort wo vorher keine Elektronen verzeichnet wurden, nun welche mit Verfahren wie der Photonenemissions-Spektroskopie sichtbar werden, wie z. B. in \cite{tise_pe}.
+Analog zu neuen Valenzbandzuständen sind auch neue Leitungsbandzustände zu erwarten, welche mit IPE erprobt werden können. % erprobt oder geprobt?
+
+
+\subsection{Experimenteller Aufbau}
+
+Bei dem Versuchsaufbau handelt es sich um einen Eigenbau der AG Donath.
+Es handelt sich um ein Gerät mit drei Ebenen für verschiedene Anwendungen.
+Eine Darstellung der verschiedenen Ebenen ist \cref{fig_ipe_setup} zu entnehmen.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.75\textwidth]{img/setup1.png}
+    \caption{Schematische Darstellung der verschiedenen Ebenen des Versuchaufbaus.
+    Nicht dargestellt sind die Vakuumpumpen, der Gaseinlass für die Ionenquelle, der Probeneinlass und der Manipulator über den die Probe zwischen den Ebenen wechseln kann und gekühlt wird.}
+    \label{fig_ipe_setup}
+\end{figure}
+Da alle Anwendungen Hochvakuum benötigen, sind zusätzlich mehrere Vakuumpumpen (Vorpumpe, Turbopumpe) an das Gerät angeschlossen.
+Die Probe wird über einen Einlass an dem Manipulator befestigt und kann dann zu den unterschiedlichen Ebenen geschoben werden.
+Hier verhalten sich die LEED- und IPE-Ebene wie in \cref{sec:theo1} beschrieben.
+Um verschiedene Einstrahlwinkel zu beobachten, werden für die IPE zwei Zählrohre verwendet und es besteht die Möglichkeit die Orientierung der Probenoberfläche über den Manipulator anzupassen.
+In der Ebene zur Probenpräparation befinden sich eine Heizspule, um Oberflächenverunreinigungen oder Schutzschichten abzudampfen und eine Ionenquelle zu Sputtern.
+Letztere dient dazu glatte Oberflächen herzustellen, weswegen die Einstrahlung nahezu parallel erfolgt.
+
+\subsection{Durchführung \& Diskussion}
+
+Bevor eine IPE-Messung für die $\text{TiSe}_2$-Probe durchgeführt werden kann, ist es notwendig eine Kalibration der Messinstrumente durchzuführen.
+Zu diesem Zweck wird ein Kupferkristall verwendet, da er in einer (111)-Orientierung und einem Einstrahlwinkel von \SI{12}{\degree} einen sehr markanten Oberflächenzustand besitzt, welcher bei \SI{0}{\degree} verschwindet.
+Um die Kalibrationsmessung durchzuführen, ist es zunächst nötig das Kupfer zu präparieren.
+Dafür wird es auf dem Manipulator angebracht und in die Präparationsebene gefahren.
+Damit nur die Verunreinigungen der Oberfläche entfernt werden, wird die Probe auf ihrer Rückseite über den Manipulator gekühlt, während die Vorderseite über das Heizfilament erhitzt wird.
+Nach dem Erhitzen wird die Oberfläche mit Argonionen glatt gesputtert.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}{0.495\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{plots/Cu_0.pdf}
+    \caption{}
+    \end{subfigure}
+    \begin{subfigure}{0.495\textwidth}
+        \centering
+        \includegraphics[width=1.1\textwidth]{plots/Cu_12.pdf}
+        \caption{}
+    \end{subfigure}
+    \caption{IPE-Spektren von Kupfer (111) bei (a) \SI{0}{\degree} und (b) \SI{12}{\degree} Einstrahlwinkel.}
+    \label{fig_Cu_kal}
+\end{figure}
+Die daraufhin aufgenommen Kalibrationsspektren für \SI{0}{\degree} und \SI{12}{\degree} sind in \cref{fig_Cu_kal} dargestellt.
+Aus dem Verhältnis zum Rauschhintergrund lässt sich der Oberflächenzustand bei \SI{12}{\degree} direkt zu entnehmen.
+Erkennbar ist jedoch auch, dass dieser bei \SI{0}{\degree} nicht verschwindet, aber ein deutlich kleineres Verhältnis zum Hintergrundrauschen aufweist.
+Vermutlich lag keine optimale Probenpräparation vor und es könnten sich über den Messzeitraum Verunreinigungen auf der Probenoberfläche angesammelt haben.
+Zur Bestimmung der Unsicherheiten wird $\sqrt{n}$ für die Anzahl $n$ verwendet und für die Energieunsicherheit eine stetige Gleichverteilung über den mittleren Abstand der Datenpunkte.
+
+\
+
+Vor der Messung der $\text{TiSe}_2$-Probe ist jedoch ein weiterer Schritt notwendig, da sich auf der zur Verfügung gestellten Probe eine Schutzschicht aus Selen befindet.
+Die Probe wird in der LEED-Ebene betrachtet, wo aufgrund der Selenschicht zusätzliche Beugungsspots erscheinen.
+Durch langsames Erhitzen in der Präparationsebene wird die Schutzschicht gelöst und zwischendurch in der LEED-Ebene beobachtet, ob die zusätzlichen Spots noch vorhanden sind.
+Sobald sie es nicht mehr sind, wird die Probe unter \SI{200}{\kelvin} auf ca. \SI{190}{\kelvin} gekühlt und die IPE-Messung durchgeführt.
+Diese ist \cref{fig_ipe_thighs2} zu sehen.
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{plots/TiSe2.pdf}
+    \caption{IPE-Spektrum der $\text{TiSe}_2$-Probe bei ca. \SI{190}{\kelvin}.}
+    \label{fig_ipe_thighs2}
+\end{figure}
+Hier lassen sich % TODO erkennen.
+
+
+
+
+% BroFi Kommentare:
 
 %Warum TiS2? falls das hier war, i dont recall.
 
@@ -8,7 +112,9 @@
 %Erst irgendwas sputtern (Argon, iirc). Aceton-Gas für Zählrohr.
 %Kühlen für: der manipulator ist ziemlich maissv und da ist kupferblock drin. Wenn der zu warm wird, dampft der krass aus. (500°C für 1h).
 %Schnitt senkrecht durch Bandschema. Zwei Messungen, eine nahe Null (Null ja erstmal nicht bekannt) da sollte eigentlich der niederenergetische Zustand verschwinden, weil unter Fermienergie, also nicht zugängig für IPE. Oberer Zustand ist Bildladungszustand.
-%Da ist dann noch so zwei Zustände drüber. Die kann man nicht unterscheiden, aber Hoffnung wäre, die zu sehen. (Oder war das schon TiS2?)
-%
-%
-%
+%Da ist dann noch so zwei Zustände drüber. Die kann man nicht unterscheiden, aber Hoffnung wäre, die zu sehen. (Oder war das schon TiS2? <- ja)
+
+%Zweiter Tag: TiS2 rein. Leed machen. Zwischendurch immer heizen, weil Probe ist mit Selen versiegelt und das will man erst runter haben. Selen ist amorph, also einfach zu erkennen, wie viel davon im leedbild ist.
+%Da dann mit warmen (gasförmigen) Stickstoff gekühlt. Oder auch dann mit flüssigem.
+%Zwischendurch für die Messung auch immer runterkühlen, weil thermischer Hintergrund
+%Dann wieder IPE
