@@ -53,13 +53,13 @@
   \end{figure}
 
   In \cref{fig_setup2} ist der experimentelle Aufbau dargestellt, der verwendet wird, um die Magnetisierung in Abhängigkeit von einem äußeren Magnetfeld sichtbar zu machen.
-  Durch Drehen des Elektromegneten kann die Ausrichtung des Magnetfelds relativ zur Ebene und Einfallsrichtung geändert werden, sodass in longitudinaler oder polarer Richtung gemessen werden kann.
+  Durch Drehen des Elektromegneten kann die Ausrichtung des Magnetfelds relativ zur Probenebene und Einfallsrichtung geändert werden, sodass in longitudinaler oder polarer Richtung gemessen werden kann.
 
-  Zur Kalibration wird eine Kupferprobe als Spiegel verwendet, mit dem die optischen Elemente so ausgerichtet werden, dass das gemessene Signal maximiert wird.
+  Zur Kalibration wird eine Siliziumprobe als Spiegel verwendet, mit dem die optischen Elemente so ausgerichtet werden, dass das gemessene Signal maximiert wird.
   Kupfer ist nicht ferromagnetisch und eignet sich dadurch für die Kalibration.
   Um möglichst empfindlich gegenüber Änderungen der Polarisation zu sein, wird der Analysator in einen \SI{45}{\degree}-Winkel zum Polarisator gebracht, indem der Mittelpunkt zwischen maximaler und minimaler Transmission eingestellt wird.
-  Dadurch bewegt sich die Polarisation auf der Flanke der Sinuskurve des Gesetzes von Malus, sodass kleine Änderungen in der Polarisation zu einer maximalen Änderung der Intensität führen.
-  Außerdem kann die Sinuskurve hier als linear genähert werden, sodass eine Proportionalität zwischen Intensitätsänderung und Polarisationsänderung besteht.
+  Dadurch bewegt sich die Polarisation auf der Flanke der $\cos ^2$-Kurve des Gesetzes von Malus, sodass kleine Änderungen in der Polarisation zu einer maximalen Änderung der Intensität führen.
+  Außerdem kann die Kurve in der Nähe dieses Punktes als linear genähert werden, sodass eine Proportionalität zwischen Intensitätsänderung und Polarisationsänderung besteht.
 
   Dann wird eine Kalibrationsmessung für das Magnetfeld durchgeführt, indem eine Hall-Sonde an die Stelle der Probe gebracht wird und der Spulenstrom schrittweise erhöht wird.
   Es wird ein photoelastischer Modulator verwendet, um dem reflektierten Laserstrahl eine Modulation hinzuzufügen, die in Kombination mit einem Lock-In-Verstärker eine erhöhte Messgenauigkeit erlaubt.
@@ -95,11 +95,11 @@ Die Unsicherheit der Magnetfeldstärke wird als demgegenüber vernachlässigbar 
 
   In \cref{fig_moke_raw} ist das Ergebnis der Messungen dargestellt.
   Es ist deutlich sichtbar, dass während der Messung ein thermischer Drift stattfindet, der die gemessene Intensität über die Messungen wandern lässt.
-  Da die Magnetisierbarkeit (die Aufspaltung zwischen positiver und negativer Magnetisierung) der CrO$_2$-Probe deutlich größer ist, fällt dies hier stärker ins Gewicht.
+  Da die Remanenz der CrO$_2$-Probe deutlich kleiner ist, fällt dies hier stärker ins Gewicht.
   Um dies zu korrigieren werden zunächst alle Messungen über ihren Mittelwert so angepasst, dass die durchschnittliche Intensität der Messungen (für auf- und absteigende Messungen einzeln) etwa konstant ist.
   Zusätzlich wird ein konstanter thermischer Drift innerhalb der Messungen angenommen und die Messungen so korrigiert, dass die Kurven bei im Betrag sehr hohen Magnetfeldern konstant sind.
   Dies ist in \cref{fig_moke_einzeln} abgebildet.
-  Hier wird auch sichtbar, dass die geringe Präzision der Gleitkommazahlen im Messergebnis bei der CrO$_2$-Probe aufgrund der geringen Magnetisierbarkeit zu Rundungsfehlern führt. %Genius...
+  Hier wird auch sichtbar, dass die geringe Präzision der Gleitkommazahlen im Messergebnis bei der CrO$_2$-Probe aufgrund der geringen Remanenz zu Rundungsfehlern führt. %Genius...
 
 \begin{figure}[H]
     \centering
@@ -118,7 +118,18 @@ Die Unsicherheit der Magnetfeldstärke wird als demgegenüber vernachlässigbar 
 \end{figure}
 
 Aus diesen zehn Messungen werden nun jeweils Mittelwerte gebildet und in \cref{fig_moke_averages} dargestellt.
-Es ist bei beiden Messungen deutlich die Hysterese zu erkennen, wobei im Falle der CoPt-Probe die Magnetisierbarkeit deutlich höher ist.
+Es ist bei beiden Messungen deutlich die Hysterese zu erkennen, wobei im Falle der CoPt-Probe die Koerzitivfeldstärke und Remanenz deutlich höher sind (siehe \cref{tab:remko}).
+
+	\begin{table} %TODO
+		\centering
+		\caption{Gemessene Remanenz und Koerzitivfeldstärke beider Proben, Remanenz in willkürlichen Einheiten.}
+		\begin{tabular}{c| c}
+			Probe & Remanenz & Koerzitivfeldstärke \\ \hline
+      CrO$_2$ &   & \\
+      CoPt &  2 & \\
+		\end{tabular}
+		\label{tab:remko}
+	\end{table}
 
 
 \begin{figure}[H]
