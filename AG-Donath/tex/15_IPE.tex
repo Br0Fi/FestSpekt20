@@ -4,7 +4,7 @@
 
 Dieser Abschnitt beschäftigt sich mit der Suche nach einem Zustand im Leitungsband, welcher sich nach einer temperaturbedingten Phasenänderung in einer $\text{TiSe}_2$-Probe ergeben sollte.
 Dafür wird die Probe gekühlt und ein inverses Photoemissionspektrum aufgenommen.
-Die unbesetzte elektronische Struktur wird dabei im Allgemeinen in normaler und CDW Phase untersucht. %TODO habe ich von ihm gecopypasted, ich verstehe nur das "im Allgemeinen" nicht.
+Die unbesetzte elektronische Struktur wird dabei in normaler und CDW Phase untersucht. % ich verstehe nur das "im Allgemeinen" nicht, same; daher weg
 Das schließt verschiedene Zustände ein wie z.B. auch das Auftreten eines Bildladungszustandes nahe der Fermi-Energie.
 
 \subsection{Theoretische Grundlagen}
@@ -14,23 +14,40 @@ Zum Verständnis des hier dargestellten Versuchaufbaus sind Wissen über inverse
 % irgendwie unnötig der Satz, oder? Das gilt doch einfach immer für alle Kapitel in der Theorie, ansonsten wären sie ja überflüssig. w/e, aber halt unnötig.
 % -> Ja. Irgend 1 Betreuer meinte mal, dass unter jeden Abschnitt iwas stehen sollte, damit da nicht 4, 4.1, 4.1.1 untereinander gestacked sind. War sehr pingelig der Mensch, aber seitdem habe ich das in der Regel gemacht. Beim letzten Bericht nicht, weil ich konsistent mit deinem geblieben bin. Wenn's dich juckt, kannst du den rausnehmen.
 
-\subsubsection{Inverse Photoemission}
-%TODO Grafik verwenden.
+\subsubsection{Inverse Photoemission und Proportionalitätszählrohr}
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/ipe_theo.png}
+    \caption{Schematische Darstellung der inversen Photoemission.\cite{donath}}
+    \label{fig_ipe_theo}
+\end{figure}
 Wie der Name impliziert, handelt es sich bei der inversen Photoemission um einen umgekehrten Photoeffekt.
-Ein niederenergetischer Elektronenstrahl ($<\SI{20}{\electronvolt}$ \cite{wiki_ipe}) wird dazu auf eine Probe gerichtet.
+Zur Veranschaulichung dient \cref{fig_ipe_theo}.
+Ein niederenergetischer Elektronenstrahl ($<\SI{20}{\electronvolt}$ \cite{wiki_ipe}; hier ca. \SI{6}{\electronvolt}) wird dazu auf eine Probe gerichtet.
 Es handelt sich um eine oberflächensensitive Methode, da die Elektronen aufgrund ihrer geringen Energie nur wenige Atomlagen tief eindringen.
 Die Elektronen des Elektronenstrahls koppeln an Niveaus oberhalb der Vakuum-Energie an und fallen dann in unbesetzte Zustände oberhalb der Fermi-Energie.
-Letztere werden dabei in das Leitungsband angehoben und die bei der Rekombination entstehenden Photonen werden gemessen.
-Aus der Photonenenergie können Rückschlüsse auf die Bandstruktur des Materials gezogen werden.
-%TODO Wie werden die Photonen denn detektiert? Ist die Detektionsenergie variabel oder fest? Wie sieht es mit der Energie der einfallenden Elektronen aus?
+Durch Rekombination entstehen Photonen mit einer für den Übergang charakteristischen Energie $\hbar\omega$.
+Daher können aus der Photonenenergie Rückschlüsse auf die Bandstruktur des Materials gezogen werden.
+Um die Photonen zu detektieren, werden für diesen Versuch Proportionalitätszählrohre verwendet.
+Allgemein für Zählrohre ist, dass ionisierende Strahlung (hier die Photonen) das Zählgas ionisiert und dabei Elektronen frei werden.
+Diese Elektronen werden über ein elektrisches Feld in Richtung Anode beschleunigt.
+Für das Proportionalitätszählrohr ist die angelegte Spannung so gewählt, dass sich die Zählrohrcharakteristik im Proportionalbereich liegt.
+Das bedeutet, dass die freigesetzten Elektronen stark genug beschleunigt werden, um durch Stöße mit dem Zählgas weitere Elektronen herauszulösen, welche dann ebenfalls in Richtung Anode beschleunigt werden.
+Diese Elektronenlawine sorgt dafür, dass an der Anode ein Signal proportional zu der Photonenenergie abgegriffen werden kann.
 
 \subsubsection{Beugung niederenergetischer Elektronen an Oberflächen}
-%TODO Grafik verwenden.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/leed_theo.png}
+    \caption{Schematische Darstellung der Beugung niederenergetischer Elektronen an Oberflächen.\cite{leed_theo}}
+    \label{fig_leed_theo}
+\end{figure}
 
 Ähnlich wie bei der IPE wird ein niederenergetischer Elektronenstrahl auf die Probe gerichtet.
 Hierbei liegen die Energien jedoch in einer Größenordnung von \SI{100}{\electronvolt}\cite{wiki_leed}.
-Die an der Probe gebeugten Elektronen treffen auf einen LEED-Schirm, welcher aus mehreren Gittern und einem Leuchtschirm besteht.
+Die an der Probe gebeugten Elektronen treffen auf einen LEED-Schirm, welcher aus mehreren Gittern und einem Leuchtschirm besteht, wie in \cref{fig_leed_theo} zu erkennen ist.
 Die Gitter sind elektrisch so geschaltet, dass zwischen Probe und erstem Gitter ein feldfreier Raum entsteht, aber innerhalb der Gitter inelastisch gestreute Elektronen größtenteils ausgesondert werden und die verbleibenden, gebeugten Elektronen auf den Schirm beschleunigt werden.
 Aus dem Interferenzmuster der gebeugten Elektronenstrahlen, welches sich auf dem Leuchtschirm aufzeichnet, kann die Gitterstruktur der Probe entnommen werden.
 Anzumerken ist, dass es sich bei dem Interferenzmuster nicht direkt um die Gitterstruktur handelt, sondern um die Punkte im $k$-Raum, welche die Laue-Bedingung für konstruktive Interferenz erfüllen.
@@ -55,15 +72,15 @@ Eine Darstellung der verschiedenen Ebenen ist \cref{fig_ipe_setup} zu entnehmen.
     \centering
     \includegraphics[width=0.75\textwidth]{img/setup1.png}
     \caption{Schematische Darstellung der verschiedenen Ebenen des Versuchaufbaus.
-    Nicht dargestellt sind die Vakuumpumpen, der Gaseinlass für die Ionenquelle, der Probeneinlass und der Manipulator über den die Probe zwischen den Ebenen wechseln kann und gekühlt wird.} %TODO Punkt war ja, wie in meinen Notizen beschrieben, dass der Manipulator gekühlt wird, damit der nicht ausdampft und nicht unbedingt die Probe selbst, afaik.
+    Nicht dargestellt sind die Vakuumpumpen, der Gaseinlass für die Ionenquelle, der Probeneinlass und der Manipulator über den die Probe zwischen den Ebenen wechseln kann. Zudem liegt noch eine Kühlung für den Manipulator und dadurch auch für die Probe vor.}
     \label{fig_ipe_setup}
 \end{figure}
 Da alle Anwendungen Hochvakuum benötigen, sind zusätzlich mehrere Vakuumpumpen (Vorpumpe, Turbopumpe) an das Gerät angeschlossen.
 Die Probe wird über eine Einschleusungsstange an einem zentralen Manipulator befestigt und kann dann zu den unterschiedlichen Ebenen geschoben werden.
 Hier verhalten sich die LEED- und IPE-Ebene wie in \cref{sec:theo1} beschrieben.
 Um verschiedene Detektionswinkel zu beobachten, werden für die IPE zwei Zählrohre verwendet und es besteht die Möglichkeit die Orientierung der Probenoberfläche über den Manipulator anzupassen.
-In der Ebene zur Probenpräparation befinden sich eine Heizspule, um Oberflächenverunreinigungen oder Schutzschichten abzudampfen und eine Ionenquelle zum Sputtern.
-Das Sputtern dient dazu, glatte Oberflächen herzustellen, weswegen die Einstrahlung nahezu parallel erfolgt.
+In der Ebene zur Probenpräparation befinden sich eine Heizspule, um Oberflächen zu glätten oder Schutzschichten abzudampfen und eine Ionenquelle zum Sputtern.
+Das Sputtern dient dazu, Oberflächenverunreinigungen zu bereinigien, weswegen die Einstrahlung nahezu parallel erfolgt.
 
 \subsection{Durchführung und Diskussion}
 
@@ -100,10 +117,17 @@ Für die Größe der Unsicherheit der Anzahl wird $\sqrt{n}$ für die Anzahl $n$
 
 \
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/TiSe2LEED}
+    \caption{LEED Aufnahme einer $\text{TiSe}_2$-Probe von \cite{leed_sample} zum Vergleich.}
+    \label{fig_leed_sample}
+\end{figure}
 Vor der Messung der $\text{TiSe}_2$-Probe ist jedoch ein weiterer Schritt notwendig, da sich auf der zur Verfügung gestellten Probe eine Schutzschicht aus Selen befindet.
 Die Probe wird in der LEED-Ebene betrachtet, wo aufgrund der amorphen Selenschicht ein diffuser Hintergrund erscheint.
 Durch langsames Erhitzen in der Präparationsebene wird die Schutzschicht gelöst und zwischendurch in der LEED-Ebene beobachtet, ob die Beugungsspots des $\text{TiSe}_2$ sichtbar sind.
-Sobald dies der Fall ist wird die IPE-Messung durchgeführt. %, wird die Probe unter \SI{200}{\kelvin} (auf ca. \SI{190}{\kelvin}) gekühlt und die IPE-Messung durchgeführt.
+Zum Vergleich dient die Vorlage von \cite{leed_sample} in \cref{fig_leed_sample}.
+Sobald die Beugungsspots sichtbar sind, wird die IPE-Messung durchgeführt. %, wird die Probe unter \SI{200}{\kelvin} (auf ca. \SI{190}{\kelvin}) gekühlt und die IPE-Messung durchgeführt.
 Diese ist \cref{fig_ipe_thighs2} zu sehen.
 \begin{figure}[!ht]
     \centering
@@ -112,12 +136,7 @@ Diese ist \cref{fig_ipe_thighs2} zu sehen.
     \label{fig_ipe_thighs2}
 \end{figure}
 Hier lässt sich ein annähernd linearer Verlauf erkennen.
-%TODO "Die Probe wurde gar nicht unterhalb der kritischen Temperatur gekühlt und der CDW-rückgefaltete Zustand wird hier gar nicht erwartet"
-% Ich habe hier in der Diskussion noch nichts geändert, weil ich mir unsicher bin, was man dann hier sehen sollte. (Es sei denn, die Antwort ist nichts.)
-Daher ist es unklar, ob sich der gesuchte Zustand im Leitungsband tatsächlich dort befindet.
-Der Anstieg liegt vermutlich an IPE von Verunreinigungen, welche sich über die Messzeit auf der Probe abgelagert haben.
-Aus den kleineren Peaks bei ca. \SI{11.2}{\electronvolt} oder \SI{12}{\electronvolt} kann aufgrund der geringen Abweichungen vom Hintergrund nichts entnommen werden.
-Eine weitere Möglichkeit wäre, dass die $\text{TiSe}_2$-Probe bei dem Abheizen der Schutzschicht ebenfalls abgetragen wurde und deshalb keine charakteristischen Peaks gemessen wurden.
+Das Fehlen charakteristischer Peaks ist darauf zurüchzuführen, dass die Probe nicht unter die kritische Temperatur gekühlt wurde und der CDW-rückgefaltete Zustand demnach hier nicht vorliegt.
 
 % BroFi Kommentare:
 
