@@ -1,7 +1,7 @@
 \newpage
 \section{Faraday Rotation}
 
-\subsection{Execution}
+\subsection{Execution} %TODO Methods?
 
 \begin{figure}[!ht]
     \centering
@@ -18,7 +18,7 @@ After polarizing the beam, it travels through the sample inside a magnetic field
 The transmitted light is then deflected into a lens system for reducing noise and focussing.
 A key component in this setup is the beam displacer, where the beam splits into two relative to each other orthogonally polarized parts.
 Their intensity difference is dependent on the Faraday rotation induced by the sample.
-The beams are then both focused on different rows on the CCD-chip which is connected with a spectrometer.
+The beams are then both focused on different rows on the CCD chip which is connected with a spectrometer.
 Again, to remove the background light signal present in the laboratory, the signals of two additional rows around the ones where the beams are focused are taken and subtracted as background.
 In the setup used for the acquisition, a read-out-rate of \SI{1}{\mega\hertz} is reached and allows measurement of roughly $1000$ spectra per minute.
 
@@ -27,7 +27,7 @@ In the setup used for the acquisition, a read-out-rate of \SI{1}{\mega\hertz} is
 According to the theoretical description in \cref{sec:theory}, measuring allows us to obtain the Faraday rotation, however with background.
 As this background does not change with the polarization, measurements are taken at \SI{+45}{\degree} and \SI{-45}{\degree} (by introducing a $\lambda/2$-waveplate) and then subtracted, since the Faraday rotation changes sign.
 
-To ensure that the WS$_2$ monolayer is laying flatly on a sapphire ($\text{Al}_2\text{O}_3$) substrate of \SI{500}{\micro\meter} thickness, it is trapped between hexagonal boron nitride layers, which only adds a negligible contribution to the measured data.
+To ensure that the WS$_2$ monolayer is laying flat on a sapphire ($\text{Al}_2\text{O}_3$) substrate of \SI{500}{\micro\meter} thickness, it is trapped between hexagonal boron nitride layers, which only adds a negligible contribution to the measured data. %adverb von flat ist flat
 Since the beam passes through both, the sapphire substrate and the WS$_2$ monolayer, again two measurements have to be taken do differentiate the background from the monolayer.
 This is done by comparing the Verdet constant of the monolayer with substrate to the Verdet constant of only substrate.
 
@@ -54,7 +54,7 @@ From the scattering of data points outside of the exciton region, an uncertainty
     \label{fig_WS2_lorentians}
 \end{figure}
 For comparison all lorentian fits are found in \cref{fig_WS2_lorentians}.
-The Faraday rotation at the exciton energy rises almost linearly as a function og the magnetic field.
+The Faraday rotation at the exciton energy rises almost linearly as a function of the magnetic field.
 Only the minimum at \SI{0.75}{\tesla} does not fit very well.
 This may be due to imperfection in choosing the same sample position, or a small movement of the sample spot during the measurement time.
 Also, the energy of the minima is not exactly the same for all magnetic field strengths, as it should be.
