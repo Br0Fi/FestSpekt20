@@ -39,11 +39,23 @@ As shown in \cref{fig_valley_split}, this leads to the existence of lower energy
 
 \subsection{Single-photon emitters}
 \label{sec:theory:spe}
-%TODO Hanbury-Brown-Twiss
 
 Single-photon emitters (SPEs) are light sources that don't emit more than one photon at once.
-SPEs are identified by performing photon antibunching, meaning that two detectors are used, whith one giving a start signal and the other the stop signal, allowing the measurement of the so called second-order correlation function $g^{(2)}(\tau)$.
-If the emitter in question is a Single-photon emitter, there will be a significant dip in the relative quantity of delays between start and stop signal close to zero.
+SPEs are identified by performing photon antibunching, meaning that two detectors are used, whith one giving a start signal and the other the stop signal, allowing the measurement of the so called second-order correlation function
+\begin{equation}
+  g^{(2)}(\tau) = \frac{\left< I(t) I(t + \tau) \right>}{\left< I(t)\right> ^2} \,.
+\end{equation}
+Here $I(t)$ is the intensity trace and $\left< \right>$ refers to the expected value.
+This function can be measured using the Hanbury-Brown-Twiss (HBT) inferometry setup depicted in \cref{fig_hbt}.
+If the emitter in question is a Single-photon emitter, there will be a significant dip in the relative quantity of delays between start and stop signal close to zero \cite{tran2016}.
+SPEs are defined as having this dip be below \SI{0.5}{} at $\tau = 0$, if the measurement is normalized to \SI{1}{} far away from the dip.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{img/Correlation-interferometer}
+    \caption{Schematic of the Hanbury-Brown-Twiss experiment. \cite{wikiHBT}}
+    \label{fig_hbt}
+\end{figure}
 
 \subsection{Magneto-optic effect}
 
