@@ -14,12 +14,10 @@
 \end{figure}
 
 Hexagonal boron nitride powder on a substrate is viewed through a confocal microscope, which is shown in \cref{fig_confocal}.
-In order to navigate on the sample, a white light source and a camera are used.
 For the measurements a laser and a detector is used.
 The laser is passed through a laser line filter, to sharpen its energy distribution.
-The pinhole causes light not emitted from the desired plane to be excluded, allowing focusing along the optical axis.
-% was ist jetzt der Sinn von dem pinhole? Eigentlich würde ich ja das mit dem aus einer Ebene sagen, aber er meinte ja irgendwas anderes.
-Once a promising region is found, the laser and the detector (a spectrometer) are used, to record spectra at different spots on the sample, until a likely single photon emitter (SPE) is found.
+In order to navigate on the sample, a white light source and a camera are used.
+Once a promising region is found, the laser and the spectrometer are used, to record spectra at different spots on the sample, until a likely single photon emitter (SPE) is found.
 The likely SPE is identified through having a clean spectrum that only contains peaks of one SPE and no other photon sources.
 
 Once a suspected SPE is found, an antibunching measurement is conducted, by replacing the spectrometer with two fibres that split the light into two parts, that are seperately measured with two detectors as described in \cref{sec:theory:spe}.
@@ -34,7 +32,7 @@ Additionally spectra are also recorded for increasing laser powers. %verwechsele
 In \cref{fig_antibunch_raw} the raw measurement data recorded in the procedure described above is shown.
 In the following the measurement of the SPE will be called $S(\tau)$ and the background measurement will be called $B(\tau)$ with $\tau$ the delay measured between the two detectors.
 It can be seen, that peaks exist in both measurements.
-These stem from resonances within the laser, causing a not completely constant photon output rate of the laser at this small timescale.
+These stem from reflections in the fibre of the HBT setup.
 As these resonances are independent of the sample, the background measurement contains only these resonances and can be used to derive a background corrected signal $\tilde{S} (\tau)$.
 If the average number of counts in a bin far away from the dip or any resonances is $I_S$ for the SPE measurement and $I_B$ for the background, the correction can be done as follows:
 \begin{equation}
@@ -78,6 +76,7 @@ Only the part of the measurement close to the dip is shown.
 \end{figure}
 
 This is done for six different powers and shown in \cref{sec:anhang:spe}.
+%TODO Wasserfallplot
 
 These antibunching measurements show that indeed a single photon emitter was found, as they all show a significant dip at a delay between start and stop signal of \SI{0}, because this means that it is at least much less likely that the source emits two photons at once, than at a finite delay.
 It can also be seen that for very high laser powers the edges of the signal start to decrease significantly with the absolute value of the delay time.
@@ -104,20 +103,20 @@ For the power an uncertainty of $1\%$ is assumed.
 \end{figure}
 
 It can be seen that both the depth and the width decreases with increasing laser power.
-For the depth this can only be explained by the increasing likelyhood that two photons hit the detectors at the same time, with at least one of them not stemming from the SPE (e.g. a reflection).
-But as the width decreases at the same time, it can be seen that the emitter doesn't reach complete saturation, as in this case only the constant background would increase, causing the width at half depth to increase as well.
-% jetzt wo ich das geschrieben habe, finde ich diese beiden Plots nicht sehr aussagevoll, da das beides ziemlich obvious ist, aber ich weiß nicht, was ich sonst mit den ganzen antibunching messungen machen soll.
+For the depth this is explained by the behavior of the avalanche detectors, which show a finite time precision (jitter).
+For higher powers, the delay time is reduced and the depth of the dip decreases due to the jitter.
 
 It is also observed that the SPE starts blinking at high powers, disappearing for short periods of time, before reappearing.
 This can be explained, by supposing that at this photon rate the emitter reaches periods of saturation in the way that electron-hole pairs are created faster than they can decay, causing periods of time, where there are no excitable electrons available.
+%TODO Mail-Antwort
 
 \subsubsection{Spectra and Power efficiency of the SPE}
 
 In \cref{fig_spe_spectrum_example} an example of the recorded spectra is shown.
 A constant background has been substracted, so that there are no counts at high wavelengths.
 The large peak corresponds to the main zero-phonon decay of an exciton, while to the right two peaks of the one-phonon decay and even two very small peaks of the two-phonon decay can be seen.
-For the one-phonon decay one peak belongs to longitudinal phonons and one to transverse phonons.
-Though for the two-phonon decay three combinations are possible (longitudinal-longitudinal, longitudinal-transverse, transverse-transverse), only two small peaks can be seen in the spectrum, possibly because the energy difference between two of these combinations doesn't exist or isn't high enough to allow seperation at these low count rates.
+For the one-phonon decay both peaks belong to longitudinal phonons.
+Though for the two-phonon decay three combinations are possible (longitudinal-longitudinal, longitudinal-transverse, transverse-transverse), only two small peaks can be seen in the spectrum, possibly because the energy difference between two of these combinations isn't high enough to allow seperation at these low count rates.
 %vmtl optisch, aber kp
 The small peak at \SI{532}{nm} is caused by the reflection of the laser itself, as this is its wavelength.
 It is small, because most of it gets filtered out by the longpass filter.

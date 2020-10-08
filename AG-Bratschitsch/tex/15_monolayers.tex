@@ -2,21 +2,21 @@
 \section{Monolayers}
 \label{sec:mono}
 
-\subsection{Execution}
+\subsection{Sample Preparation}
 
 The following is conducted for two different unknown TMDCs:
 Firstly the scotch tape technique is used, to separate the layers from a thick crystal and then into thinner pieces, until monolayers are likely to exist on the tape.
-These layers are then transferred to a gel strip, from which they are subsequently transferred onto a silicon wafer that has an SiO$_2$ layer on top.
+These layers are then transferred to a gel strip, from which they are subsequently transferred onto a silicon wafer that has an \SI{80}{nm} SiO$_2$ layer on top.
 
-In order to now find pieces on the wafer that are monolayers, an optical microscope is used, utilizing the fact that, due to the different refractive indices of Si, the SiO$_2$ and the deposited material, different thicknesses appear in different colors \cite{benameur2011}.
+In order to now find pieces on the wafer that are monolayers, a common optical microscope is used, utilizing the fact that, due to the different refractive indices of Si, the SiO$_2$ and the deposited material, different thicknesses appear in different colors \cite{benameur2011}.
 The samples are then transferred to a widefield microscope, a schematic of which is shown in \cref{fig_widefield}.
-Its basic principle is to illuminate the sample with a laser (green lines) to create excitons and measure the photoluminescence light (red lines) in the spectrometer (detector).
-Removing the mirror and using the white light source (light blue lines) to illuminate the sample allows taking visuals of the sample, in order to navigate on the sample.
-The laser line filter is added to sharpen the spectrum emitted from the laser and the longpass filter filters the laser's reflection from the photoluminescence spectrum.
-The lense used has a numerical aperture of \SI{0.9}{}.
+Its basic principle is to illuminate the sample with a \SI{532}{nm} laser (green lines) to create excitons and measure the photoluminescence light (red lines) in the spectrometer.
+Using the white light source allows illuminatation of the sample in order to navigate on it.
+The laser line filter is added to sharpen the spectrum emitted from the laser and the longpass filter (cutoff at \SI{560}{nm}) filters the laser's reflection from the photoluminescence spectrum.
+The objective lense used is a Nikon 50x and has a numerical aperture of \SI{0.6}{}.
 Apart from also having imaging properties, a slit can be inserted into the widefield microscope, to record a spectrum using a basic light spectrometer.
 Due to the insertion of the slit, imaging properties in one direction are lost in the process.
-For both microscopes a sample with a grating of known grid size is used, to get the scale for the images taken of the samples.
+For both microscopes (the common optical microscope and the widefield microscope) a sample with a grid of known grid size is used, to get the scale for the images taken of the samples.
 For one material two specimen (pieces including monolayers) are examined and for the other one only one specimen is examined.
 
 \begin{figure}[!ht]
@@ -29,7 +29,7 @@ For one material two specimen (pieces including monolayers) are examined and for
 
 \subsection{Analysis}
 
-In \crefrange{fig_mono_spec1}{fig_mono_spec3} the images recorded using the interference based and the widefield microscope are shown.
+In \crefrange{fig_mono_spec1}{fig_mono_spec3} the images recorded based on substrate interference and the widefield microscope are shown.
 As an example, for the first specimen the image containing the spectrum is shown in \cref{fig_mono_spec1_spec}.
 In the interference based microscope monolayers appear as fawn (hex color code \#A97E5C), while in the widefield microscope they appear bright white.
 From these images for each specimen the spectrum is calculated by summing over multiple lines of pixels and can be seen in \cref{fig_mono_1dspectra}.
@@ -49,9 +49,9 @@ From these images for each specimen the spectrum is calculated by summing over m
         \caption{widefield}
 	      \label{fig_mono_spec1_wide}
     \end{subfigure}
-    \begin{subfigure}{0.7\textwidth}
+    \begin{subfigure}{0.75\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{img/output_t1/bild_m1-3.png}
+        \includegraphics[width=\textwidth]{img/output_t1/bild_m1-3}
         \caption{spectrum}
 	      \label{fig_mono_spec1_spec}
     \end{subfigure}
@@ -73,7 +73,7 @@ From these images for each specimen the spectrum is calculated by summing over m
         \caption{widefield}
 	      \label{fig_mono_spec2_wide}
     \end{subfigure}
-    \caption{Optical microscopy images for specimen 2 of material 1 obtained by the interference based microscope and the widefield microscope.}
+    \caption{Optical microscopy images for specimen 2 of material 1 obtained by the interference based microscope and the widefield microscope. The region of the monolayer is overexposed so that the thicker parts are also visible.}
 	\label{fig_mono_spec2} %2->2
 \end{figure}
 
@@ -120,8 +120,13 @@ From these images for each specimen the spectrum is calculated by summing over m
 \end{figure}
 
 From the spectra the peak positions and peak width are extracted, by performing a Gauss fit for each peak.
+The peak width is given as the full width of the Gauss curve at half of its height (full width at half maximum, FWHM).
 The peak position can be used to assign the materials to specific TMDCs according to their characteristic exciton transitions.
-The measured peaks for material 1 are at \SI{746,5\pm 7,2}{nm} and \SI{744,1 \pm 7,2} for specimen 1 and 2, respectively, which may correspond to MoSe$_2$, monolayers, which emit at \SI{790}{nm}. \cite{Tonndorf2013}.
-The difference may be due to not having measured a monolayer, but e.g. a trilayer or a change in the bandgap due to interaction with the substrate.
-The measured peaks for material 2 lie at \SI{530,1 \pm 4,3}{nm} (A exciton) and \SI{654,4 \pm 6,8} (B exciton), allowing it to be assigned to monolayer WSe$_2$ with reasonable certainty.
-The uncertainties are taken from the full width at half maximum (FWHM) according to $\sigma = \mathrm{FWHM}/(2\sqrt{2 \ln 2})$.
+The measured peaks for material 1 are at \SI{746,5\pm 7,2}{nm} and \SI{744,1 \pm 7,2} for specimen 1 and 2, respectively, which corresponds well to WSe$_2$ monolayers, which are reported to emit at \SI{752}{nm}. \cite{Tonndorf2013}.
+
+The measured peaks for material 2 lie at \SI{530,1 \pm 4,3}{nm} and \SI{654,4 \pm 6,8}.
+The uncertainties are taken from the FWHM according to $\sigma = \mathrm{FWHM}/(2\sqrt{2 \ln 2})$.
+The first peak can be assigned to the wavelength of the laser used (\SI{532}{nm}), meaning that the peak stems from leakage of the long pass filter.
+The offset of \SI{2}{nm} is likely due to worse calibration of the spectrometer at the edges of the measurement range.
+Using the Varshni equation and fit parameters as described and reported in \cite{xu19} at room temperature (\SI{295 \pm 5}{K}) monolayer MoS$_2$ emits at \SI{664 \pm 12}{nm}.
+This allows the second peak to be assigned to monolayer MoS$_2$.

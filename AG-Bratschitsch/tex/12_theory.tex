@@ -6,23 +6,23 @@
 To probe the band gap of semiconductors, photoluminescence spectroscopy can be used.
 This means illuminating the sample in order to create electron-hole pairs, which then form excitons and ultimately recombine, sending out a photon.
 The energy of the exciton annihilation is characteristic for the material.
-Therefore a spectrum recorded by the emission of such an illuminated sample will contain a peak at this characteristic energy (wavelength) of the most faverable transition as well as possibly other peaks stemming from effects such as spin-splitting and phonon-activated transitions.
+Therefore a spectrum recorded by the emission of such an illuminated sample will contain a peak at this characteristic energy (wavelength) of the most favorable transition as well as possibly other peaks stemming from effects such as spin-splitting and phonon-activated transitions.
 
 \subsection{Transition metal dichalcogenides}
 
-Transition metal dichalcogenides (TMDCs) are layered materials made from one part transition metal (Mo, Ti, W) and two parts chalcogenides (S, Se, Te) and are typically semiconductors.
+TMDCs are layered materials made from one part transition metal (Mo, Ti, W) and two parts chalcogenides (S, Se, Te) and are typically semiconductors.
 The general crystal structure is shown in \cref{fig_tmdc_structure}.
 The layers can be separated from each other by exfoliation as they are only bound by comparatively weak Van der Waals bonds, while within the plane the atoms are bound by covalent bonds.
 As monolayers, unlike the bulk crystal, don't have an inversion center, the band structure changes considerably, when transitioning from the bulk to monolayers.
 Specifically the $\bar{K}$ points of the reciprocal lattice no longer show sixfold symmetry, and split into $\bar{K}$ and $\bar{K}'$ valleys, which have reversed splin splitting.
-As shown in \cref{fig_valley_split}, this leads to the existence of lower energy A excitons and higher energy B excitons, which couple to different polarizations of light depending on the valley.
+As shown in \cref{fig_valley_split}, this leads to the existence of lower energy A excitons and higher energy B excitons, which couple to different circular polarizations of light depending on the valley.
 
 \begin{figure}[!ht]
     \centering
     \begin{subfigure}{0.47\textwidth}
         \centering
     		\includegraphics[width=\textwidth]{img/tmdc_structure.png}
-    		\caption{} %TODO schauen, ob das auch mit doctorsthesis funktioniert,
+    		\caption{}
     		\label{fig_tmdc_structure}
     \end{subfigure}
     \hfill
@@ -39,6 +39,7 @@ As shown in \cref{fig_valley_split}, this leads to the existence of lower energy
 
 \subsection{Single-photon emitters}
 \label{sec:theory:spe}
+%TODO Hanbury-Brown-Twiss
 
 Single-photon emitters (SPEs) are light sources that don't emit more than one photon at once.
 SPEs are identified by performing photon antibunching, meaning that two detectors are used, whith one giving a start signal and the other the stop signal, allowing the measurement of the so called second-order correlation function $g^{(2)}(\tau)$.
